@@ -1,0 +1,187 @@
+/* --- Global Styling --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  /* 🌈 Cool animated gradient background */
+  background: linear-gradient(135deg, #667eea, #764ba2, #6dd5fa, #2980b9);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+/* --- Global Styling --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  /* 🌊 Cool teal-blue-green gradient */
+  background: linear-gradient(135deg, #00c6ff, #0072ff, #43cea2, #185a9d);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* ✨ Gradient animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* --- App Container --- */
+.app-container {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  width: 90%;
+  max-width: 480px;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.app-container:hover {
+  transform: scale(1.02);
+}
+
+.title {
+  text-align: center;
+  color: #1e3d58;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* --- Input Section --- */
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#task-input {
+  flex: 1;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 2px solid #dfe6e9;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#task-input:focus {
+  border-color: #00a8ff;
+  box-shadow: 0 0 8px rgba(0, 168, 255, 0.3);
+}
+
+button {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+/* --- Buttons --- */
+#add {
+  background: linear-gradient(135deg, #00b894, #00cec9);
+  color: #fff;
+}
+
+#add:hover {
+  background: linear-gradient(135deg, #00997a, #00a6a8);
+}
+
+.delete-all {
+  background: linear-gradient(135deg, #0984e3, #74b9ff);
+  color: #fff;
+}
+
+.delete-all:hover {
+  background: linear-gradient(135deg, #0652dd, #3498db);
+}
+
+/* --- Task List --- */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-list div {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-list div:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Task Text --- */
+.task-list span {
+  flex: 1;
+  font-size: 1rem;
+  color: #2d3436;
+  word-break: break-word;
+}
+
+/* --- Edit & Delete Buttons --- */
+.task-list button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+}
+
+.task-list button:nth-child(2) {
+  background: linear-gradient(135deg, #00a8ff, #0097e6);
+  color: #fff;
+}
+
+.task-list button:nth-child(2):hover {
+  background: linear-gradient(135deg, #0077b6, #0097e6);
+}
+
+.task-list button:nth-child(3) {
+  background: linear-gradient(135deg, #ff7675, #d63031);
+  color: #fff;
+}
+
+.task-list button:nth-child(3):hover {
+  background: linear-gradient(135deg, #e84118, #c23616);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 480px) {
+  .input-section {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
